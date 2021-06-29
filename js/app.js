@@ -10,19 +10,23 @@ const fetchUserData=()=>{
     }).then(data=>{
         appendData(data)
     }).catch(error=>{
-        console.log(error)
+        throw('Something went wrong')
     })
 }
 const appendData=(data)=>{
     let outPut=document.getElementById('app');
  for(let item in data){
-     let li=document.createElement('li');
+     let div=document.createElement('div');
+     div.classList.add('user_cards-info');
      let btn=document.createElement('button');
-     btn.textContent='Get Posts'
-     li.innerHTML=data[item].name + '<br />' + data[item].email
-     li.setAttribute('id',data[item].id)
-     li.appendChild(btn)
-     outPut.appendChild(li)
+     btn.textContent='Get Posts';
+    
+     div.innerHTML=`<div><h2>${data[item].name}</h2> <p>${data[item].email}</p></div>`
+     div.setAttribute('id',data[item].id)
+     div.appendChild(btn)
+     outPut.appendChild(div)
+     let singleUser=document.getElementById('singleUser');
+     singleUser.style.display='none'
      btn.addEventListener('click',e=>{getDetails(e)})
     }
 }
@@ -33,19 +37,35 @@ const getDetails=(e)=>{
         return response.json();
     }).then(postDetails=>{
     let outPut=document.getElementById('app');
+    let singleUser=document.getElementById('singleUser');
+    let glass=document.getElementById('glass')
     outPut.innerHTML='';
+    glass.style.display='none';
     postDetails.forEach(detail => {
         let li=document.createElement('li');
         let h2=document.createElement('h2');
+        h2.style.textTransform='uppercase';
         let p=document.createElement('p');
+        let styles = `
+                    padding-top:1rem;
+                    padding-bottom:1rem;
+                    color:black;
+                    `
+        p.style=styles
         h2.textContent=detail.title
         p.textContent=detail.body
         li.appendChild(h2)
         li.appendChild(p)
-        outPut.appendChild(li);
+        singleUser.style.display='block'
+        singleUser.appendChild(li);
        });
     }).catch(err=>{
         throw('Something went wrong, Try again')
     })
 }
 }
+//nav bar styling
+window.addEventListener('scroll',()=>{
+    var header=document.querySelector('header');
+    header.classList.toggle('sticky',window.scrollY>0)
+})
