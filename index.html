@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>My blog</title>
 </head>
 <body>
-    <section id="app"></section>
+<header>
+<input type="checkbox" id="nav-toggle">
+<a href="#" class="logo">My blog</a>
+<ul class="nav-links">
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+<label for="nav-toggle" class="icon-burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</label>
+</header>
+<section class="banner">
+    <div class="header-text">
+        <h3>The more that you read, the more things you will know</h3>
+        <p id="text">get blogpost to read</p>
+        <button><a href="#glass">Get started</a> </button>
+    </div>
+</section>
+<main>
+<section class="glass" id="glass">
+    <div class="users_list">
+        <div class="status">
+            <h1>Our top 10 blogers</h1>
+        </div>
+        <div class="user_cards" id="app"></div>
+    </div>
+</section>
+<section id="singleUser"></section>
+
+
+</main>
+<footer><ul class="nav-links">
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li><br />
+    
+</ul>
+<p>Copyright © 2021 Bizimungu Pascal</p>
+</footer>
 <script src="./js/app.js"></script>
 </body>
 </html>
