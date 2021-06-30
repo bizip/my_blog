@@ -144,7 +144,7 @@ header .icon-burger .line{
         opacity: 0;
     }
     .header-text{
-        top: 35%;
+        top: 45%;
         width: 90%;
         margin-top: 4rem;
     }
@@ -157,6 +157,18 @@ header .icon-burger .line{
     }
   
     
+}
+
+@media screen and (max-width:675px) {
+    header .logo{
+        font-weight: 400;
+        color: #fff;
+        font-size: 1.5em;
+        letter-spacing: 1px;
+    }
+    .banner{
+        height: 100vh;
+    }
 }
 
 #text{
@@ -288,3 +300,4 @@ footer p{
     text-align: center;
     
 }
+

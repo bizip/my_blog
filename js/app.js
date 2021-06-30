@@ -19,6 +19,7 @@ const appendData=(data)=>{
  for(let item in data){
      let div=document.createElement('div');
      div.classList.add('user_cards-info');
+     div.style.textAlign='center'
      let btn=document.createElement('button');
      btn.textContent='Get Posts';
     
