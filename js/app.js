@@ -1,4 +1,5 @@
 window.onload = function() {
+    // A function that will be trigered once form is loaded
     fetchUserData();
 };
 const fetchUserData=()=>{
@@ -21,7 +22,7 @@ const appendData=(data)=>{
      let btn=document.createElement('button');
      btn.textContent='Get Posts';
     
-     div.innerHTML=`<div><h2>${data[item].name}</h2> <p>${data[item].email}</p></div>`
+     div.innerHTML=`<div id='try'><h2>${data[item].name}</h2> <p>${data[item].email}</p></div>`
      div.setAttribute('id',data[item].id)
      div.appendChild(btn)
      outPut.appendChild(div)

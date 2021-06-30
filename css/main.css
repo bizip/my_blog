@@ -52,7 +52,6 @@ header ul li a{
 }
 .header-text{
     position: absolute;
-    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -96,7 +95,7 @@ header .icon-burger .line{
         width:100%;
     }
     .banner{
-        height: 100vh !important;
+        height: 90vh !important;
     }
     .user_cards-info {
         display: block !important;
@@ -145,9 +144,16 @@ header .icon-burger .line{
         opacity: 0;
     }
     .header-text{
-        top: 50%;
+        top: 35%;
         width: 90%;
         margin-top: 4rem;
+    }
+    .user_cards-info p{
+        padding: 7px;
+    }
+    #singleUser{
+        display: block;
+        margin:0 !important;
     }
   
     
@@ -229,7 +235,7 @@ main{
     border-radius: 20px;
     padding: 10px;
     color: #fff;
-    margin-left: 40px;
+    /* margin-left: 40px; */
     margin-bottom: 30px;
     border-style: hidden;
     background-color:#246696;
